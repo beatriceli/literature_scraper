@@ -7,6 +7,13 @@ This project provides Python scripts to automate the retrieval of research artic
 - `pubmed.py`: For querying and retrieving research articles from the PubMed database.
 - `bibparser.py`: For parsing bibliographic data from ACM Digital Library exports.
 
+The python files also load a .env file, which you can input your WOS API key and your respective queries for the databases. Good practice to not push your .env file onto GitHub (in .gitignore).
+
+```sh
+WOS_API_KEY="#########################"
+WOS_QUERY="(TS=(Wearables) AND TS=(health OR well-being*))"
+PUBMED_QUERY="((Wearables) AND (health OR well-being*))"
+```
 
 ## wos.py
 This script queries the Web of Science (WoS) database and retrieves research articles based on a provided search query and optional date range.
